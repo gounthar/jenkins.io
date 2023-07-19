@@ -155,7 +155,7 @@ pipeline {
 ----
 <1> This `image` parameter (of the link:/doc/book/pipeline/syntax#agent[`agent`]
 section's `docker` parameter) downloads the
-https://hub.docker.com/_/maven/[`maven:3.9.3-eclipse-temurin-11` Docker image] (if it's not
+https://hub.docker.com/_/maven/[`maven:3.9.3-eclipse-temurin-17-alpine` Docker image] (if it's not
 already available on your machine) and runs this image as a separate container.
 This means that:
 * You'll have separate Jenkins and Maven containers running locally in Docker.
