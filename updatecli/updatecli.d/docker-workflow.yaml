@@ -1,5 +1,5 @@
 ---
-name: Bumps the docker-worflow plugin version
+name: Bumps the docker-workflow plugin version
 
 scms:
   default:
@@ -45,14 +45,14 @@ targets:
       matchpattern: >-
         (.*)jenkins-plugin-cli(.*)docker-workflow:(.*)\"
       replacepattern: >-
-        ${1}jenkins-plugin-cli${2}docker-workflow:{{ source "dockerWorkflowLatestVersion" }}\"
+        ${1}jenkins-plugin-cli${2}docker-workflow:{{ source "dockerWorkflowLatestVersion" }}"
     scmid: default
 
 actions:
   default:
     kind: github/pullrequest
     scmid: default
-    title: Bump Docker Workflow to {{ source "dockerWorkflowLatestVersion" }}
+    title: '[Docker Tutorial] Bump Docker Workflow Plugin to {{ source "dockerWorkflowLatestVersion" }}'
     spec:
       labels:
         - dependencies
