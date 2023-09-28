@@ -41,7 +41,7 @@ The `git diff` might look like this:
     <dependencies>
       <dependency>
         <groupId>io.jenkins.tools.bom</groupId>
--        <artifactId>bom-2.319.x</artifactId>
+-        <artifactId>bom-2.277.x</artifactId>
 +        <artifactId>bom-2.387.x</artifactId>
 -        <version>984.vb5eaac999a7e</version>
 +        <version>2179.v0884e842b_859</version>
