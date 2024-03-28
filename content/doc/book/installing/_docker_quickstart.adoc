@@ -30,8 +30,8 @@ Click on link:https://gitpod.io/?autostart=true#https://github.com/jenkins-docs/
 
 Now, log in via your browser using the `admin` username and `admin` password on link:http://localhost:8080[localhost:8080].
 
-[[accessing-the-jenkins-docker-container]]
-== Accessing the Docker container
+[[accessing-the-jenkins-docker-containers]]
+== Accessing the Docker containers
 
 If you want to access the Docker container running your Jenkins controller through a terminal/command prompt using the link:https://docs.docker.com/engine/reference/commandline/exec/[`docker compose exec`] command, add the name of the service ` to the `docker compose exec` command to get something like:
 
@@ -42,26 +42,7 @@ jenkins@be6994815148:/$ # We are now in the container running Jenkins
 ----
 
 That will access the Jenkins Docker container named "jenkins_controller".
-As with a standard access to a machine, you can exit the container by typing `exit` or pressing  <kbd>Ctrl+D</kbd>.
-
-Should you need to access the services logs, you can do so by running the following command:
-[source,bash]
-----
-docker compose logs -f
-----
-
-This command will display the logs of all services running in the dockerized-Jenkins instance.
-You will see the logs of the Jenkins controller, Jenkins agent, and the side-kick service.
-If you would like to see the logs of a specific service, you can do so by specifying the service name as follows:
-[source,bash]
-----
-docker compose logs -f <service-name>
-----
-
-With <service-name> being:
-
-- `jenkins_controller` for the Jenkins controller
-- `default_agent` for the Jenkins agent
+As with standard access to a machine, you can exit the container by typing `exit` or pressing  +++<kbd>Ctrl+D</kbd>+++.
 
 Should you need to access the Docker container running your Jenkins agent, you can do so by running the following command:
 [source,bash]
@@ -72,6 +53,26 @@ jenkins@be6994815148:/$ # We are now in the container running the Jenkins agent
 
 [[accessing-the-jenkins-console-log-through-docker-logs]]
 == Accessing the Docker logs
+
+Should you need to access the services logs, you can do so by running the following command:
+[source,bash]
+----
+docker compose logs -f
+----
+
+This command will display the logs of all services running in the dockerized Jenkins instance.
+You will see the logs of the Jenkins controller, Jenkins agent, and the side-kick service.
+If you would like to see the logs of a specific service, you can do so by specifying the service name as follows:
+[source,bash]
+----
+docker compose logs -f <service-name>
+----
+
+With `<service-name>` being:
+
+- `jenkins_controller` for the Jenkins controller
+- `default_agent` for the Jenkins agent
+
 
 You may want to access the Jenkins console log, for instance, when <<unlocking-jenkins,Unlocking Jenkins>> as part of the <<setup-wizard,Post-installation setup wizard>>.
 
