@@ -8,7 +8,7 @@ For this tutorial, you will require:
 
 * A macOS, Linux, Windows, or Chromebook (with Linux) machine with:
 ** 2 GB of RAM
-** 2 GB of drive space for Jenkins
+** 10 GB of drive space for Jenkins
 * Or a free tier account on:
 ** https://aws.amazon.com/free/[AWS]
 ** https://cloud.google.com/free/[Google Cloud]
@@ -19,3 +19,4 @@ For this tutorial, you will require:
 ** https://www.docker.com/[Docker]
 ** https://docs.docker.com/compose/install/[Docker Compose]
 ** link:https://git-scm.com/downloads[Git], and optionally link:https://desktop.github.com/[GitHub Desktop].
+** Web browser: see the link:/doc/administration/requirements/web-browsers/[Web Browser Compatibility] page
