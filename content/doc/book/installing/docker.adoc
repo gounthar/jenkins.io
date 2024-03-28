@@ -31,9 +31,7 @@ Supported operating systems include macOS, Linux and Windows, and supported clou
 
 === Installing Docker
 
-To install Docker on your operating system, follow the instructions in the link:/doc/pipeline/tour/getting-started/#prerequisites[Guided Tour prerequisites].
-
-Alternatively, visit link:https://hub.docker.com/search?type=edition&offering=community[Docker Hub], and select the *Docker Community Edition* suitable for your operating system or cloud service.
+To install Docker and Docker Compose on your operating system, check you have the correct prerequisites et the <<prerequisites,Prerequisites>> below) and then visit link:https://hub.docker.com/search?type=edition&offering=community[Docker Hub], and select the *Docker Community Edition* suitable for your operating system or cloud service.
 Follow the installation instructions on their website.
 
 [CAUTION]
@@ -43,7 +41,7 @@ Read more about this in Docker's link:https://docs.docker.com/engine/installatio
 This page also contains information about how to configure Docker to start on boot.
 ====
 
-include::doc/book/installing/_installation_requirements.adoc[]
+include::doc/tutorials/_new_prerequisites.adoc[]
 
 === Downloading and running Jenkins in Docker
 
