@@ -33,10 +33,14 @@ include::doc/book/installing/_new_prerequisites.adoc[]
 
 === Installing Docker
 
-To install Docker and Docker Compose on your operating system, check you have the correct prerequisites at the <<prerequisites,Prerequisites>> above and then visit the link:https://docs.docker.com/get-docker/[Docker documentation website], and select the *Docker Desktop* version suitable for your operating system. If you're using a cloud service or a machine without a GUI, you can then install the Docker Engine only starting from link:https://docs.docker.com/engine/install/[this page].
-Follow the installation instructions on their website.
-We will also need to install Docker Compose. It's already part of the Docker Desktop installation on Windows, Linux, and macOS, but you will need to install it separately if you only installed the Docker Engine.
-Please follow the link:https://docs.docker.com/compose/install/linux/#install-using-the-repository[instructions] on the Docker documentation website for Linux, link:https://docs.docker.com/compose/install/standalone/#on-windows-server[these instructions] for Windows, or link:https://www.ionos.com/digitalguide/server/configuration/docker-compose-on-mac/[these instructions] for macOS.
+To install Docker and Docker Compose on your operating system, first, ensure that you have the correct <prerequisites,Prerequisites>> as outlined above.
+Then, navigate to the link:https://docs.docker.com/get-docker/[Docker documentation website] and select the Docker Desktop version suitable for your operating system.
+If you’re using a cloud service or a machine without a GUI, you can proceed to install the Docker Engine only from link:https://docs.docker.com/engine/install/[this page].
+Follow the installation instructions provided on their website.
+
+Additionally, you will need to install Docker Compose.
+While it’s included in the Docker Desktop installation for Windows, Linux, and macOS, you will need to install it separately if you only installed the Docker Engine.
+Follow the link:https://docs.docker.com/compose/install/linux/#install-using-the-repository[instructions] provided on the Docker documentation website for Linux, these link:https://docs.docker.com/compose/install/standalone/#on-windows-server[instructions] for Windows, or these link:https://www.ionos.com/digitalguide/server/configuration/docker-compose-on-mac/[instructions] for macOS.
 
 [CAUTION]
 ====
