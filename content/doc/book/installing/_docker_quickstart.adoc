@@ -13,9 +13,9 @@ _run-jenkins-in-docker.adoc).
 === Prerequisites
 
 
-The Jenkins project provides Linux container images but also Windows container images.
-This tutorial focuses on the Linux container images only, so ensure that your Docker for Windows installation is configured to run `Linux Containers` rather than `Windows Containers`.
-Refer to the Docker documentation for instructions to link:https://docs.docker.com/docker-for-windows/#switch-between-windows-and-linux-containers[switch to Linux containers].
+The Jenkins project provides Linux container images but also link:https://hub.docker.com/r/jenkins/jenkins/tags?page=1&name=windows[Windows container images].
+This tutorial focuses on the Linux container images only, so ensure that your Docker for Windows installation is configured to run `Linux Containers` rather than link:https://learn.microsoft.com/en-us/virtualization/windowscontainers/quick-start/set-up-environment?tabs=dockerce[`Windows Containers`].
+Refer to the Docker documentation for instructions to link:https://docs.docker.com/desktop/wsl/[use Linux containers].
 
 . Open up a terminal window.
 . Create a link:https://docs.docker.com/network/bridge/[bridge network] in Docker using the following link:https://docs.docker.com/engine/reference/commandline/network_create/[`docker network create`] command:
