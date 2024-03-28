@@ -1,0 +1,20 @@
+////
+This file is only meant to be included as a snippet in other documents.
+////
+
+=== Prerequisites
+
+For this tutorial, you will require:
+
+* A macOS, Linux, Windows, or Chromebook (with Linux) machine with:
+** 2 GB of RAM
+** 2 GB of drive space for Jenkins
+* You could also try it in the Cloud with a free tier account on:
+** https://aws.amazon.com/free/[AWS]
+** https://cloud.google.com/free/[Google Cloud]
+** https://azure.microsoft.com/en-us/free/[Microsoft Azure]
+** https://www.oracle.com/cloud/free/[Oracle Cloud]
+** https://www.gitpod.io/[Gitpod]
+* The following software installed:
+** https://www.docker.com/[Docker]
+** https://docs.docker.com/compose/install/[Docker Compose]
