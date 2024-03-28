@@ -52,8 +52,7 @@ This page also contains information about how to configure Docker to start on bo
 === Downloading and running Jenkins in Docker
 
 There are several Docker images of Jenkins available.
-
-Use the recommended official link:https://hub.docker.com/r/jenkins/jenkins/tags?page=1&name=lts-jdk17[`jenkins/jenkins:lts-jdk17` image] from the link:https://hub.docker.com/[Docker Hub repository].
+We recommend you use the recommended official link:https://hub.docker.com/r/jenkins/jenkins/tags?page=1&name=lts-jdk17[`jenkins/jenkins:lts-jdk17` image] from the link:https://hub.docker.com/[Docker Hub repository].
 This image contains the current link:/download[Long-Term Support (LTS) release of Jenkins], which is production-ready.
 However, this image is not bundled with the plugins you may need for your Jenkins instance. That would require you to install them manually later on.
 In this tutorial, we propose you two ways of doing:
