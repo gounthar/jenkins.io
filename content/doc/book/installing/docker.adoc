@@ -29,10 +29,14 @@ Learn more about these concepts in link:https://docs.docker.com/get-started/[Get
 Due to Docker's fundamental platform and container design, a Docker image for a given application, such as Jenkins, can be run on any supported operating system or cloud service also running Docker.
 Supported operating systems include macOS, Linux and Windows, and supported cloud services include AWS and Azure.
 
+include::doc/tutorials/_new_prerequisites.adoc[]
+
 === Installing Docker
 
-To install Docker and Docker Compose on your operating system, check you have the correct prerequisites et the <<prerequisites,Prerequisites>> below) and then visit link:https://hub.docker.com/search?type=edition&offering=community[Docker Hub], and select the *Docker Community Edition* suitable for your operating system or cloud service.
+To install Docker and Docker Compose on your operating system, check you have the correct prerequisites at the <<prerequisites,Prerequisites>> above and then visit the link:https://docs.docker.com/get-docker/[Docker documentation website], and select the *Docker Desktop* version suitable for your operating system. If you're using a cloud service or a machine without a GUI, you can then install the Docker Engine only starting from link:https://docs.docker.com/engine/install/[this page].
 Follow the installation instructions on their website.
+We will also need to install Docker Compose. It's already part of the Docker Desktop installation on Windows, Linux, and macOS, but you will need to install it separately if you only installed the Docker Engine.
+Please follow the link:https://docs.docker.com/compose/install/linux/#install-using-the-repository[instructions] on the Docker documentation website for Linux, link:https://docs.docker.com/compose/install/standalone/#on-windows-server[these instructions] for Windows, or link:https://www.ionos.com/digitalguide/server/configuration/docker-compose-on-mac/[these instructions] for macOS.
 
 [CAUTION]
 ====
@@ -40,8 +44,6 @@ If you are installing Docker on a Linux-based operating system, ensure you confi
 Read more about this in Docker's link:https://docs.docker.com/engine/installation/linux/linux-postinstall/[Post-installation steps for Linux] page of their documentation.
 This page also contains information about how to configure Docker to start on boot.
 ====
-
-include::doc/tutorials/_new_prerequisites.adoc[]
 
 === Downloading and running Jenkins in Docker
 
