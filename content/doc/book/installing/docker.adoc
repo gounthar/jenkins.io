@@ -33,7 +33,7 @@ include::doc/book/installing/_new_prerequisites.adoc[]
 
 === Installing Docker
 
-To install Docker and Docker Compose on your operating system, first, ensure that you have the correct <prerequisites,Prerequisites>> as outlined above.
+To install Docker and Docker Compose on your operating system, first, ensure that you have the correct <<prerequisites,Prerequisites>> as outlined above.
 Then, navigate to the link:https://docs.docker.com/get-docker/[Docker documentation website] and select the Docker Desktop version suitable for your operating system.
 If you’re using a cloud service or a machine without a GUI, you can proceed to install the Docker Engine only from link:https://docs.docker.com/engine/install/[this page].
 Follow the installation instructions provided on their website.
