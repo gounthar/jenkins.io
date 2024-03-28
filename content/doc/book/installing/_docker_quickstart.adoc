@@ -33,7 +33,7 @@ Now, log in via your browser using the `admin` username and `admin` password on 
 [[accessing-the-jenkins-docker-containers]]
 == Accessing the Docker containers
 
-If you want to access the Docker container running your Jenkins controller through a terminal/command prompt using the link:https://docs.docker.com/engine/reference/commandline/exec/[`docker compose exec`] command, add the name of the service ` to the `docker compose exec` command to get something like:
+If you'd like to access the Docker container running your Jenkins controller through a terminal or command prompt using the link:https://docs.docker.com/reference/cli/docker/compose/exec/[`docker-compose exec`] command, include the name of the service within the command to get something like:
 
 [source,bash]
 ----
@@ -41,15 +41,18 @@ $ docker-compose exec jenkins_controller bash
 jenkins@be6994815148:/$ # We are now in the container running Jenkins
 ----
 
-That will access the Jenkins Docker container named "jenkins_controller".
-As with standard access to a machine, you can exit the container by typing `exit` or pressing  +++<kbd>Ctrl+D</kbd>+++.
+This will access the Docker container named "jenkins_controller."
+As with standard access to a machine, you can exit the container by typing `exit` or pressing +++<kbd>Ctrl+D</kbd>+++.
 
-Should you need to access the Docker container running your Jenkins agent, you can do so by running the following command:
+To access the Docker container running your Jenkins agent, use the following command:
+
 [source,bash]
 ----
 $ docker-compose exec default_agent bash
 jenkins@be6994815148:/$ # We are now in the container running the Jenkins agent
 ----
+
+To leave the container, type `exit` or press +++<kbd>Ctrl+D</kbd>+++.
 
 [[accessing-the-jenkins-console-log-through-docker-logs]]
 == Accessing the Docker logs
