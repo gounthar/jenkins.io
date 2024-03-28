@@ -29,7 +29,7 @@ Learn more about these concepts in link:https://docs.docker.com/get-started/[Get
 Due to Docker's fundamental platform and container design, a Docker image for a given application, such as Jenkins, can be run on any supported operating system or cloud service also running Docker.
 Supported operating systems include macOS, Linux and Windows, and supported cloud services include AWS and Azure.
 
-include::_new_prerequisites.adoc[]
+include::doc/book/installing/_new_prerequisites.adoc[]
 
 === Installing Docker
 
