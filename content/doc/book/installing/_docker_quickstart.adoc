@@ -28,7 +28,7 @@ image::docker/jenkins-docker-instance-started.png[width=860]
 
 If you are unable to install `docker compose` on your machine for any reason, you can still run the example in the cloud for free thanks to link:https://www.gitpod.io/[GitPod]. GitPod link:https://www.gitpod.io/pricing[is free] for 50 hours per month.
 You need to link it to your GitHub account so you can run the example in the cloud.
-Click on link:https://gitpod.io/?autostart=true#https://github.com/jenkins-docs/quickstart-tutorials[that link] to open a new browser tab with a GitPod workspace where you'll be able to start the Jenkins instance, and run the rest of the tutorial.
+Click on link:https://gitpod.io/?autostart=true#https://github.com/jenkins-docs/quickstart-tutorials[that link] to open a new browser tab with a GitPod workspace where you'll be able to start the Jenkins instance, and run the rest of this guide.
 
 Now, log in via your browser using the `admin` username and `admin` password on link:http://localhost:8080[localhost:8080].
 
@@ -78,41 +78,15 @@ With `<service-name>` being:
 - `jenkins_controller` for the Jenkins controller
 - `default_agent` for the Jenkins agent
 
-
-You may want to access the Jenkins console log, for instance, when <<unlocking-jenkins,Unlocking Jenkins>> as part of the <<setup-wizard,Post-installation setup wizard>>.
-
-Access the Jenkins console log through the terminal/command prompt window from which you executed the `docker run ...` command.
-Alternatively, you can also access the Jenkins console log through the link:https://docs.docker.com/engine/reference/commandline/logs/[Docker logs] of your container using the following command:
-
-`docker logs <docker-container-name>`
-
-Your `<docker-container-name>` can be obtained using the `docker ps` command.
-
-
 == Accessing the Jenkins home directory
 
-You can access the Jenkins home directory, to check the details of a Jenkins build in the `workspace` subdirectory, for example.
+You can access the Jenkins home directory, to check the details of a Jenkins build in the `jobs` subdirectory, for example.
+To access the Jenkins home directory, use the following command:
+[source,bash]
+----
+docker-compose exec jenkins_controller bash
+jenkins@be6994815148:/$ cd /var/jenkins_home/jobs
+jenkins@be6994815148:/var/jenkins_home/jobs$ ls -la
+----
 
-If you mapped the Jenkins home directory (`/var/jenkins_home`) to one on your machine's local file system, for example, in the `docker run ...` command <<downloading-and-running-jenkins-in-docker,above>>, access the directory contents through your machine's usual terminal/command prompt.
-
-If you specified the `--volume jenkins-data:/var/jenkins_home` option in the `docker run ...` command, access the contents of the Jenkins home directory through your container's terminal/command prompt using the link:https://docs.docker.com/engine/reference/commandline/container_exec/[`docker container exec`] command:
-
-`docker container exec -it <docker-container-name> bash`
-
-As per <<accessing-the-jenkins-console-log-through-docker-logs,the previous section>>, get your `<docker-container-name>` using the link:https://docs.docker.com/engine/reference/commandline/container_ls/[`docker container ls`] command.
-If you specified the `--name jenkins-blueocean` option in the `docker container run ...`  command above (refer to <<accessing-the-jenkins-blue-ocean-docker-container,Accessing the Jenkins/Blue Ocean Docker container>> if needed), use the `docker container exec` command:
-
-`docker container exec -it jenkins-blueocean bash`
-
-////
-Might wish to add explaining the `docker run -t` option, which was covered in
-the old installation instructions but not above.
-
-Also mention that spinning up a container of the `jenkins/jenkins` Docker
-image can be done so with all the same
-https://github.com/jenkinsci/docker#usage[configuration options] available to
-the other images published by the Jenkins project.
-
-Explain colon syntax on Docker image references like
-`jenkins/jenkins:latest'.
-////
+This will list all the jobs in the Jenkins home directory.
