@@ -22775,6 +22775,7 @@
         message: |-
           Introduce an API to be used by the Folders plugin to fix some corner cases involving branch project reloading.
 
+  # pull: 8914 (PR title: Bump org.jenkins-ci.plugins.workflow:workflow-api from 1289.va_cf779f32df0 to 1291.v51fd2a_625da_7)
   # pull: 8918 (PR title: Fixing `NotSerializableException: org.acegisecurity.context.SecurityContext$1`)
   # pull: 8919 (PR title: Update dependency stylelint-checkstyle-reporter to v1)
   # pull: 8920 (PR title: Add marker class to submit buttons )
@@ -22800,7 +22801,7 @@
           - daniel-beck
         pr_title: "[JENKINS-72637] Make Cloud permission scope inherit from Jenkins"
         message: |-
-          Make the Agent/Provision permission available in the global Security configuration when using matrixbased authorization strategies.
+          Make the Agent/Provision permission available in the global Security configuration when using matrix-based authorization strategies.
       - type: rfe
         category: rfe
         pull: 8938
@@ -22900,6 +22901,7 @@
   # pull: 8917 (PR title: `WebSockets.upgradeResponse`)
   # pull: 8952 (PR title: Basic `ProxyConfigurationManagerTest`)
   # pull: 8959 (PR title: Fix login form window size responsiveness thresholds)
+  # pull: 8961 (PR title: Bump org.jenkins-ci.plugins:script-security from 1321.va_73c0795b_923 to 1326.vdb_c154de8669)
   # pull: 8967 (PR title: Update dependency webpack to v5.90.2)
   # pull: 8968 (PR title: Update dependency node to v20.11.1)
   # pull: 8969 (PR title: Update dependency sass to v1.71.0)
@@ -22954,7 +22956,7 @@
           - jglick
         pr_title: Use `ABORTED` from `Run.reload`
         message: |-
-          NonPipeline builds interrupted by a controller restart will now be marked as aborted rather than failed.
+          Non-Pipeline builds interrupted by a controller restart will now be marked as aborted rather than failed.
       - type: rfe
         category: rfe
         pull: 8990
@@ -22991,7 +22993,9 @@
         pr_title: Move `CloudList.setOwner` call from `Jenkins.loadTasks` to `load`
         message: |-
           Setting a proper owner for <code>Jenkins.clouds</code> after <code>Jenkins.load()</code>.
+
   # pull: 8884 (PR title: Replace pipeline-stage-view with graph-view in the setup wizard)
+  # pull: 8988 (PR title: Bump io.jenkins.plugins:plugin-util-api from 3.8.0 to 4.1.0)
   # pull: 8994 (PR title: Update dependency eslint to v8.57.0)
   # pull: 8997 (PR title: Stop shipping `commons-lang3`)
   # pull: 8999 (PR title: Reduce usage of `StringUtils`)
@@ -23070,7 +23074,7 @@
           - timja
         pr_title: "[JENKINS-72796] stable context classloader for Computer.threadPoolForRemoting"
         message: |-
-          Ensure threads in the <code>Computer.threadPoolForRemoting</code>executor service always have the Jenkins webapp <code>ClassLoader</code> set as the context <code>ClassLoader</code> to prevent random class loading issues when code is running in this <code>ExecutorService</code>.
+          Ensure threads in the <code>Computer.threadPoolForRemoting</code> executor service always have the Jenkins webapp <code>ClassLoader</code> set as the context <code>ClassLoader</code> to prevent random class loading issues when code is running in this <code>ExecutorService</code>.
       - type: rfe
         category: developer
         pull: 8979
@@ -23184,6 +23188,11 @@
   - version: '2.452'
     date: 2024-04-02
     changes:
+      - type: security
+        message: Security fix.
+        references:
+          - url: /security/advisory/2024-04-17/
+            title: 2024-04-17 security advisory
       - type: rfe
         category: rfe
         authors:
@@ -23241,6 +23250,245 @@
   # pull: 9104 (PR title: Update dependency node to v20.12.0)
   # pull: 9108 (PR title: Bump com.puppycrawl.tools:checkstyle from 10.14.2 to 10.15.0)
   # pull: 9110 (PR title: Remove usage of `org.apache.commons.lang.StringUtils`)
+
+  - version: '2.453'
+    date: 2024-04-09
+    changes:
+      - type: major rfe
+        category: rfe
+        pull: 9069
+        authors:
+          - Regnander
+        pr_title: Updated Swedish translation
+        message: |-
+          Major overhaul of the entire Swedish translation.
+      - type: rfe
+        category: rfe
+        pull: 9132
+        authors:
+          - timja
+        pr_title: Improve Edit build information page
+        message: |-
+          Improve the edit build information page.
+      - type: rfe
+        category: rfe
+        pull: 9111
+        authors:
+          - janfaracik
+        pr_title: Refresh the 'New item' page
+        message: |-
+          Refresh the 'New item' page.
+      - type: rfe
+        category: rfe
+        pull: 9115
+        authors:
+          - janfaracik
+        pr_title: Refresh the style of alerts
+        message: |-
+          Refresh the style of alerts.
+      - type: bug
+        category: bug
+        pull: 9133
+        issue: 70246
+        authors:
+          - timja
+        pr_title: "[JENKINS-70246] Unexpectedly wide sidepanel"
+        message: |-
+          Adjust side panel sizes for certain screens like iPad Pro.
+
+  # pull: 8110 (PR title: Move `AbstractBuild/index.jelly` to `Run/index.jelly`)
+  # pull: 9105 (PR title: use symbol for keep build forever badge)
+  # pull: 9106 (PR title: replace usage of old build status sprite svgs with the new symbol-status svgs)
+  # pull: 9107 (PR title: Bump io.jenkins.plugins:ionicons-api from 56.v1b_1c8c49374e to 70.v2959a_b_74e3cf)
+  # pull: 9114 (PR title: Bump org.jacoco:jacoco-maven-plugin from 0.8.11 to 0.8.12)
+  # pull: 9117 (PR title: Bump org.jenkins-ci.main:jenkins-test-harness from 2182.v0138ccb_c0b_cb_ to 2185.v796448319b_7c)
+  # pull: 9118 (PR title: Bump org.jenkins-ci.main:jenkins-test-harness from 2185.v796448319b_7c to 2186.v5a_b_e6dd02a_35)
+  # pull: 9119 (PR title: Remove usage of `org.apache.commons.lang.RandomStringUtils`)
+  # pull: 9120 (PR title: Add /manage to uninstall plugin redirect to preserve breadcrumb)
+  # pull: 9121 (PR title: Update dependency postcss-preset-env to v9.5.3)
+  # pull: 9125 (PR title: ci: Set tests check to pending when maven build starts)
+  # pull: 9129 (PR title: Update dependency postcss-preset-env to v9.5.4)
+  # pull: 9130 (PR title: Bump io.jenkins.plugins:checks-api from 2.0.2 to 2.2.0)
+  # pull: 9134 (PR title: Update babel monorepo to v7.24.4)
+  # pull: 9135 (PR title: Update dependency css-loader to v6.11.0)
+  # pull: 9136 (PR title: Remove dead JS code)
+  # pull: 9138 (PR title: Update dependency node to v20.12.1)
+  # pull: 9139 (PR title: Update dependency sass to v1.74.1)
+  # pull: 9140 (PR title: Update dependency css-loader to v7)
+  # pull: 9145 (PR title: Bump org.jenkins-ci:jenkins from 1.112 to 1.113)
+
+  - version: '2.454'
+    date: 2024-04-16
+    changes:
+      - type: rfe
+        category: rfe
+        pull: 9127
+        issue: 72947
+        authors:
+          - mawinter69
+        pr_title: "[JENKINS-72947] Support symbols in `TopLevelItemDescriptor#getIconClassName()`"
+        message: |-
+          Support symbols in the <code>newJob</code> page.
+      - type: bug
+        category: regression
+        pull: 9167
+        issue: 73007
+        authors:
+          - janfaracik
+        pr_title: "[JENKINS-73007] Create-item button no longer disabled when duplicate\
+          \ name present"
+        message: |-
+          Create-item button is no longer disabled when a duplicate name is present.
+      - type: bug
+        category: regression
+        pull: 9155
+        authors:
+          - janfaracik
+        pr_title: Fix badges appearance
+        message: |-
+          Fix the appearance of badges.
+      - type: bug
+        category: bug
+        pull: 9170
+        issue: 73011
+        authors:
+          - jglick
+        pr_title: '[JENKINS-73011] Round-trip `JNLPLauncher.tunnel` to `null` not
+          `""`'
+        message: |-
+          After reconfiguring a static inbound agent in the GUI using fields such as WebSocket, deprecated in 2.440.x, the suggested launch instructions would incorrectly include <code>tunnel</code> (with no argument) even if that field had been left blank.
+      - type: bug
+        category: bug
+        pull: 9083
+        issue: 65829
+        authors:
+          - Dohbedoh
+        pr_title: "[JENKINS-65829] Fix WorkspaceCleanupThread to consider suffixed\
+          \ works…"
+        message: |-
+          Fix the <code>WorkspaceCleanupThread</code> to consider workspaces with suffixes even if the original is nonexistent.
+          Reduce the number of remoting calls made by <code>WorkspaceCleanupThread</code>.
+      - type: bug
+        category: bug
+        pull: 9157
+        issue: 72998
+        authors:
+          - jtnord
+        pr_title: "[JENKINS-72998] call refresh on the Extension providers again"
+        message: |-
+          If the <code>variant</code> plugin is installed at the same time as a plugin that has an <code>OptionalExtension</code>, these extensions would not be correctly discovered until the next scan for new <code>Extensions</code>.
+      - type: bug
+        category: bug
+        pull: 9141
+        issue: 69588
+        authors:
+          - timja
+        pr_title: "[JENKINS-69588] Stop installed plugins page jumping on load"
+        message: |-
+          Installed plugin view no longer jumps during first load.
+
+  # pull: 9109 (PR title: Bump io.jenkins.plugins:asm-api from 9.6-3.v2e1fa_b_338cd7 to 9.7-33.v4d23ef79fcc8)
+  # pull: 9131 (PR title: Use 'jenkins-button' for tables)
+  # pull: 9142 (PR title: [JEP-235] Remove leftover unused resources)
+  # pull: 9143 (PR title: Remove table usage from buildCaption.jelly)
+  # pull: 9144 (PR title: Bump org.jenkins-ci.plugins:script-security from 1326.vdb_c154de8669 to 1335.vf07d9ce377a_e)
+  # pull: 9146 (PR title: Bump commons-io:commons-io from 2.16.0 to 2.16.1)
+  # pull: 9149 (PR title: Update license file path in README)
+  # pull: 9151 (PR title: Fix formatting)
+  # pull: 9154 (PR title: Bump io.jenkins.plugins:design-library from 286.v6643a_81e02b_8 to 296.v56576267b_508)
+  # pull: 9156 (PR title: Bump tar from 6.2.0 to 6.2.1 in /war)
+  # pull: 9158 (PR title: Update dependency style-loader to v4)
+  # pull: 9159 (PR title: Bump org.springframework:spring-framework-bom from 5.3.33 to 5.3.34)
+  # pull: 9160 (PR title: Bump org.jenkins-ci.main:jenkins-test-harness from 2186.v5a_b_e6dd02a_35 to 2189.v1c38d94b_43b_a_)
+  # pull: 9161 (PR title: Update dependency css-loader to v7.1.1)
+  # pull: 9163 (PR title: Bump slf4jVersion from 2.0.12 to 2.0.13)
+  # pull: 9164 (PR title: Update dependency css-loader to v7.1.1)
+  # pull: 9165 (PR title: Bump stapler.version from 1843.ve7da_6a_9cf575 to 1847.v97341b_b_a_414f)
+  # pull: 9166 (PR title: Bump io.jenkins.tools.incrementals:git-changelist-maven-extension from 1.7 to 1.8)
+  # pull: 9168 (PR title: Update dependency node to v20.12.2)
+  # pull: 9171 (PR title: Update dependency postcss-preset-env to v9.5.5)
+  # pull: 9172 (PR title: Update dependency sass-loader to v14.2.0)
+  # pull: 9173 (PR title: Update dependency sass to v1.75.0)
+  # pull: 9174 (PR title: Bump org.springframework.security:spring-security-bom from 5.8.11 to 5.8.12)
+
+  - version: '2.455'
+    date: 2024-04-22
+    changes:
+      - type: rfe
+        category: rfe
+        pull: 9182
+        issue: 73046
+        authors:
+          - jonesbusy
+        pr_title: "[JENKINS-73046] Remove ASM from core"
+        message: |-
+          Remove ASM dependencies from core.
+
+  # pull: 9162 (PR title: Set Locale.ROOT when use String.toLowerCase)
+  # pull: 9178 (PR title: Remove duplicate words in Javadoc and test comments)
+  # pull: 9179 (PR title: Update dependency lit to v3.1.3)
+  # pull: 9180 (PR title: Update dependency mini-css-extract-plugin to v2.9.0)
+  # pull: 9181 (PR title: Update dependency sass-loader to v14.2.1)
+  # pull: 9183 (PR title: Update dependency postcss-preset-env to v9.5.6)
+  # pull: 9184 (PR title: Bump io.jenkins.plugins:commons-text-api from 1.11.0-95.v22a_d30ee5d36 to 1.11.0-109.vfe16c66636eb_)
+
+  - version: '2.456'
+    date: 2024-04-30
+    changes:
+      - type: rfe
+        category: rfe
+        pull: 9191
+        authors:
+          - janfaracik
+        pr_title: Update restart banner to align with updated banners
+        message: |-
+          Update restart banner to align with updated banners.
+      - type: bug
+        category: regression
+        pull: 9123
+        issue: 72845
+        authors:
+          - Lmh-java
+        pr_title: "[JENKINS-72845]: Fix status icon animation display on Safari"
+        message: |-
+          Fix status icon animation display on Safari.
+      - type: bug
+        category: bug
+        pull: 9185
+        authors:
+          - jwojnarowicz
+        pr_title: Fix phrasing error in Polish translation of install wizard
+        message: |-
+          Update Polish translation for install wizard message to skip first user.
+      - type: bug
+        category: bug
+        pull: 9214
+        authors:
+          - basil
+        pr_title: "[JENKINS-67344] Poor performance of UpdateSite.getData"
+        references:
+          - url: https://github.com/jenkinsci/json-lib/pull/30
+            title: json-lib PR 30
+        message: |-
+          Improve the performance of JSON parsing.
+
+  # pull: 9153 (PR title: Migrate to ESLint 9.1.1)
+  # pull: 9186 (PR title: Bump io.jenkins.plugins:font-awesome-api from 6.5.1-3 to 6.5.2-1)
+  # pull: 9187 (PR title: Bump org.jenkins-ci.plugins:scm-api from 689.v237b_6d3a_ef7f to 690.vfc8b_54395023)
+  # pull: 9188 (PR title: Bump org.apache.maven.plugins:maven-shade-plugin from 3.5.2 to 3.5.3)
+  # pull: 9189 (PR title: Bump stapler.version from 1847.v97341b_b_a_414f to 1849.v2fdf1a_5359b_4)
+  # pull: 9190 (PR title: Update dependency postcss-preset-env to v9.5.8)
+  # pull: 9192 (PR title: Bump stapler.version from 1849.v2fdf1a_5359b_4 to 1850.v191b_f2fee423)
+  # pull: 9193 (PR title: Update dependency postcss-preset-env to v9.5.9)
+  # pull: 9195 (PR title: Bump org.kohsuke.stapler:json-lib from 2.4-jenkins-3 to 2.4-jenkins-5)
+  # pull: 9196 (PR title: Log explanation for denial from `MappingWorksheet`)
+  # pull: 9197 (PR title: Flake in `GNUCLibraryTest`)
+  # pull: 9200 (PR title: Update dependency stylelint to v16.4.0)
+  # pull: 9205 (PR title: Update dependabot stable branch)
+  # pull: 9206 (PR title: Bump xmlunit.version from 2.9.1 to 2.10.0)
+  # pull: 9207 (PR title: Bump commons-codec:commons-codec from 1.16.1 to 1.17.0)
+  # pull: 9208 (PR title: Bump com.puppycrawl.tools:checkstyle from 10.15.0 to 10.16.0)
+  # pull: 9209 (PR title: Do not reuse `WebClient` in `StaplerAbstractTest`)
 
 # DO NOT EDIT THIS FILE DIRECTLY ON GITHUB IF YOU HAVE COMMIT ACCESS
 # ALL CHANGES MUST GO THROUGH PULL REQUESTS
