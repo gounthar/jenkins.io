@@ -35,11 +35,11 @@ Now, log in via your browser using the `admin` username and `admin` password on 
 [[accessing-the-jenkins-docker-containers]]
 == Accessing the Docker containers
 
-If you'd like to access the Docker container running your Jenkins controller through a terminal or command prompt using the link:https://docs.docker.com/reference/cli/docker/compose/exec/[`docker-compose exec`] command, include the name of the service within the command to get something like:
+If you'd like to access the Docker container running your Jenkins controller through a terminal or command prompt using the link:https://docs.docker.com/reference/cli/docker/compose/exec/[`docker compose exec`] command, include the name of the service within the command to get something like:
 
 [source,bash]
 ----
-$ docker-compose exec jenkins_controller bash
+$ docker compose exec jenkins_controller bash
 jenkins@be6994815148:/$ # We are now in the container running Jenkins
 ----
 
@@ -50,7 +50,7 @@ To access the Docker container running your Jenkins agent, use the following com
 
 [source,bash]
 ----
-$ docker-compose exec default_agent bash
+$ docker compose exec default_agent bash
 jenkins@be6994815148:/$ # We are now in the container running the Jenkins agent
 ----
 
@@ -84,7 +84,7 @@ You can access the Jenkins home directory, to check the details of a Jenkins bui
 To access the Jenkins home directory, use the following command:
 [source,bash]
 ----
-docker-compose exec jenkins_controller bash
+docker compose exec jenkins_controller bash
 ----
 
 You will then be in the Jenkins controller container.
