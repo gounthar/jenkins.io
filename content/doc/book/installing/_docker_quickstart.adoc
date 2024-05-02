@@ -85,8 +85,23 @@ To access the Jenkins home directory, use the following command:
 [source,bash]
 ----
 docker-compose exec jenkins_controller bash
+----
+
+You will then be in the Jenkins controller container.
+To access the Jenkins home directory, use the following command:
+[source,bash]
+----
 jenkins@be6994815148:/$ cd /var/jenkins_home/jobs
 jenkins@be6994815148:/var/jenkins_home/jobs$ ls -la
 ----
 
 This will list all the jobs in the Jenkins home directory.
+
+Should you want to copy the jobs subdirectory from the Jenkins home directory to your local machine, you can use the following command:
+[source,bash]
+----
+docker compose cp jenkins_controller:/var/jenkins_home/jobs <local-path>
+----
+
+With `<local-path>` being the path on your local machine where you want to copy the jobs subdirectory.
+
