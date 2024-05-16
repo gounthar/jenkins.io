@@ -65,6 +65,20 @@ You will then be presented with the *Create First Admin User* page.
 
 [.boxshadow]
 image:tutorials/docker/create-first-admin-user.png[alt="Creating first admin user",width=860] +
+You can create the first admin user by filling in the required fields.
+Once you've filled in the fields, click on the *Save and Continue* button.
+You will then be redirected to the *Instance Configuration* page.
+
+[.boxshadow]
+image:tutorials/docker/instance-configuration.png[alt="Instance configuration",width=860] +
+That's the place where you'll configure the Jenkins controller's URL.
+By default, it is set to http://localhost:8080. +
+You can keep it as is.
+Click on the *Save and Finish* button.
+
+
+
+[.boxshadow]
 
 1. Obtain the latest Jenkins instance, customized for this tutorial, by cloning the link:https://github.com/jenkins-docs/quickstart-tutorials.git[quickstart-tutorials repository].
 2. After cloning, navigate to the `quickstart-tutorials` directory, and execute the command `docker compose --profile default up -d` to run the example.
