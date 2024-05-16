@@ -56,17 +56,17 @@ There are several Docker images of Jenkins available.
 We recommend using the official link:https://hub.docker.com/r/jenkins/jenkins/tags?page=1&name=lts-jdk17[`jenkins/jenkins:lts-jdk17`] image from the Docker Hub repository.
 This image contains the current link:/download[Long-Term Support (LTS) release of Jenkins], which is production-ready.
 However, this image does not include the plugins you may need for your Jenkins instance, requiring you to install them manually later on.
-In this tutorial, we propose two ways of doing this:
+In this guide, we propose two ways of doing this:
 
 1. First, use Docker Compose to quickly set up a running Jenkins instance with a nice set of plugins in a matter of seconds.
 2. Second, use Docker Compose to run the installation wizard, giving you a better understanding of what happens under the hood.
 
 [NOTE]
 ====
-A new `jenkins/jenkins` image is published each time a new release of Jenkins Docker is published. 
+A new `jenkins/jenkins` Docker image is published each time a new release of Jenkins is published.
 You can see a list of previously published versions of the `jenkins/jenkins` image on the link:https://hub.docker.com/r/jenkins/jenkins/tags/[tags] page.
 ====
 
 include::doc/book/installing/_docker_quickstart.adoc[]
 
-include::doc/book/installing/_setup-wizard.adoc[]
+include::doc/book/installing/_setup-wizard-for-tutorials.adoc[]
