@@ -1,0 +1,138 @@
+////
+This file is only meant to be included as a snippet in other documents.
+There is a version of this file for the general 'Installing Jenkins' page
+(index.adoc) and another for tutorials (_run-jenkins-in-docker.adoc).
+This file is for the index.adoc page used in the general 'Installing Jenkins'
+page.
+If you update content on this page, please ensure the changes are reflected in
+the sibling file _docker-for-tutorials.adoc (used in
+_run-jenkins-in-docker.adoc).
+////
+
+
+=== Using the wizard.
+
+The first method we proposed is the easiest way to get Jenkins up and running.
+You may want to have a better feel of what's happening under the hood.
+This is where the second method comes in.
+You can still use the same link:https://github.com/jenkins-docs/quickstart-tutorials.git[quickstart-tutorials repository] as in the first step.
+If you have already launched the Jenkins instance previously, you can stop it by running the command `docker compose down -v --remove-orphans`.
+Once it's done, we can proceed with the second method.
+
+[source,bash]
+----
+docker compose --profile wizard up
+----
+This time, we're not using the `default` profile, but the `wizard` profile.
+This profile will guide you through the setup of Jenkins.
+We're not using the '-d' or '--detach' option, so you can see the output of the containers, and get a better understanding of what's happening.
+After a while, you should see something like this displaying in the console:
+[source,bash]
+----
+wizard_controller-1      | *************************************************************
+wizard_controller-1      | *************************************************************
+wizard_controller-1      | *************************************************************
+wizard_controller-1      |
+wizard_controller-1      | Jenkins initial setup is required. An admin user has been created and a password generated.
+wizard_controller-1      | Please use the following password to proceed to installation:
+wizard_controller-1      |
+wizard_controller-1      | 1725812a80294239bd0859973c0965a1
+wizard_controller-1      |
+wizard_controller-1      | This may also be found at: /var/jenkins_home/secrets/initialAdminPassword
+wizard_controller-1      |
+wizard_controller-1      | *************************************************************
+wizard_controller-1      | *************************************************************
+wizard_controller-1      | *************************************************************
+wizard_controller-1      |
+----
+
+Copy the generated password, and access the Jenkins controller at link:http://localhost:8080.
+
+[.boxshadow]
+image:tutorials/docker/unlock-jenkins.png[alt="Copying initial admin password",width=80%] +
+
+1. Obtain the latest Jenkins instance, customized for this tutorial, by cloning the link:https://github.com/jenkins-docs/quickstart-tutorials.git[quickstart-tutorials repository].
+2. After cloning, navigate to the `quickstart-tutorials` directory, and execute the command `docker compose --profile default up -d` to run the example.
+3. Once the containers are running successfully (you can verify this with `docker compose ps`), the controller can be accessed at http://localhost:8080.
+
+image::docker/jenkins-docker-instance-started.png[width=860]
+
+If you are unable to install `docker compose` on your machine for any reason, you can still run the example in the cloud for free thanks to link:https://www.gitpod.io/[GitPod]. GitPod link:https://www.gitpod.io/pricing[is free] for 50 hours per month.
+You need to link it to your GitHub account so you can run the example in the cloud.
+Click on link:https://gitpod.io/?autostart=true#https://github.com/jenkins-docs/quickstart-tutorials[that link] to open a new browser tab with a GitPod workspace where you'll be able to start the Jenkins instance, and run the rest of this guide.
+
+Now, log in via your browser using the `admin` username and `admin` password on link:http://localhost:8080[localhost:8080].
+
+[[accessing-the-jenkins-docker-containers]]
+== Accessing the Docker containers
+
+If you'd like to access the Docker container running your Jenkins controller through a terminal or command prompt using the link:https://docs.docker.com/reference/cli/docker/compose/exec/[`docker compose exec`] command, include the name of the service within the command to get something like:
+
+[source,bash]
+----
+$ docker compose exec jenkins_controller bash
+jenkins@be6994815148:/$ # We are now in the container running Jenkins
+----
+
+This will access the Docker container named "jenkins_controller."
+As with standard access to a machine, you can exit the container by typing `exit` or pressing +++<kbd>Ctrl+D</kbd>+++.
+
+To access the Docker container running your Jenkins agent, use the following command:
+
+[source,bash]
+----
+$ docker compose exec default_agent bash
+jenkins@be6994815148:/$ # We are now in the container running the Jenkins agent
+----
+
+To leave the container, type `exit` or press +++<kbd>Ctrl+D</kbd>+++.
+
+[[accessing-the-jenkins-console-log-through-docker-logs]]
+== Accessing the Docker logs
+
+Should you need to access the services logs, you can do so by running the following command:
+[source,bash]
+----
+docker compose logs -f
+----
+
+This command will display the logs of all services running in the dockerized Jenkins instance.
+You will see the logs of the Jenkins controller, Jenkins agent, and the side-kick service.
+If you would like to see the logs of a specific service, you can do so by specifying the service name as follows:
+[source,bash]
+----
+docker compose logs -f <service-name>
+----
+
+With `<service-name>` being:
+
+- `jenkins_controller` for the Jenkins controller
+- `default_agent` for the Jenkins agent
+
+== Accessing the Jenkins home directory
+
+You can access the Jenkins home directory, to check the details of a Jenkins build in the `jobs` subdirectory, for example.
+To access the Jenkins home directory, use the following command:
+[source,bash]
+----
+docker compose exec jenkins_controller bash
+----
+
+You will then be in the Jenkins controller container.
+To access the Jenkins home directory, use the following command:
+[source,bash]
+----
+jenkins@be6994815148:/$ cd /var/jenkins_home/jobs
+jenkins@be6994815148:/var/jenkins_home/jobs$ ls -la
+----
+
+This will list all the jobs in the Jenkins home directory.
+
+Should you want to copy the jobs subdirectory from the Jenkins home directory to your local machine, you can use the following command:
+[source,bash]
+----
+docker compose cp jenkins_controller:/var/jenkins_home/jobs <local-path>
+----
+
+With `<local-path>` being the path on your local machine where you want to copy the jobs subdirectory.
+
