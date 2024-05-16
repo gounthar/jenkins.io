@@ -9,7 +9,7 @@ the sibling file _docker-for-tutorials.adoc (used in
 _run-jenkins-in-docker.adoc).
 ////
 
-
+[[using-the-wizard-with-docker-compose]]
 == Using the wizard.
 
 The first method we proposed (<<quickstart-tutorials-repository>>) is the easiest way to get Jenkins up and running.
@@ -94,6 +94,27 @@ You need to link it to your GitHub account so you can run the example in the clo
 Click on link:https://gitpod.io/?autostart=true#https://github.com/jenkins-docs/quickstart-tutorials[that link] to open a new browser tab with a GitPod workspace where you'll be able to start the Jenkins instance, and run the rest of this guide.
 
 Now, log in via your browser using the `admin` username and `admin` password on link:http://localhost:8080[localhost:8080].
+
+[[connecting-an-agent-with-docker-compose]]
+== Connecting an agent
+
+Now that you have your Jenkins controller up and running, you can connect an agent to it.
+In this tutorial, we'll use an link:/doc/pipeline/steps/ssh-agent/#ssh-agent-plugin[SSH agent] that will be running in a Docker container.
+To do so, you need to create a new agent in Jenkins and configure it to connect to the agent container.
+But first of all, we need to install the link:https://github.com/jenkinsci/ssh-agent-plugin[SSH agent plugin] and create the credentials.
+
+=== Installing the SSH agent plugin
+
+Once connected to the dashboard, click on *Manage Jenkins* in the left-hand menu.
+Then, click on *Plugins*.
+Click on the *Available Plugins* menu, and then in the search box enter `SSH agent`.
+
+[.boxshadow]
+image:tutorials/docker/install-ssh-agent-plugin.png[alt="Installing the SSH agent plugin",width=860] +
+
+=== Creating the credentials
+
+=== Creating the agent
 
 [[accessing-the-jenkins-docker-containers]]
 == Accessing the Docker containers
