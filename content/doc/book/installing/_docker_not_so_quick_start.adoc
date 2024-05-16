@@ -59,9 +59,12 @@ We'll choose the *Install suggested plugins* option for this tutorial, but you c
 
 image:tutorials/docker/plugins-installation.png[alt="Plugins installing",width=860] +
 [.boxshadow]
-The default set of plugins will be installed. +
+The default set of plugins will then be installed. +
 This process may take a few minutes.
+You will then be presented with the *Create First Admin User* page.
 
+[.boxshadow]
+image:tutorials/docker/create-first-admin-user.png[alt="Creating first admin user",width=860] +
 
 1. Obtain the latest Jenkins instance, customized for this tutorial, by cloning the link:https://github.com/jenkins-docs/quickstart-tutorials.git[quickstart-tutorials repository].
 2. After cloning, navigate to the `quickstart-tutorials` directory, and execute the command `docker compose --profile default up -d` to run the example.
