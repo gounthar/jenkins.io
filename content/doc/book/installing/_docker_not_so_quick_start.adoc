@@ -10,9 +10,9 @@ _run-jenkins-in-docker.adoc).
 ////
 
 
-=== Using the wizard.
+== Using the wizard.
 
-The first method we proposed is the easiest way to get Jenkins up and running.
+The first method we proposed (<<quickstart-tutorials-repository>>) is the easiest way to get Jenkins up and running.
 You may want to have a better feel of what's happening under the hood.
 This is where the second method comes in.
 You can still use the same link:https://github.com/jenkins-docs/quickstart-tutorials.git[quickstart-tutorials repository] as in the first step.

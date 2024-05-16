@@ -17,7 +17,7 @@ However, this tutorial specifically focuses on the Linux container images.
 Therefore, ensure that your Docker for Windows installation is configured to run Linux Containers rather than link:https://learn.microsoft.com/en-us/virtualization/windowscontainers/quick-start/set-up-environment?tabs=dockerce[Windows Containers].
 You can refer to the Docker documentation for instructions on how to link:https://docs.docker.com/desktop/wsl/[use Linux containers].
 
-
+[[quickstart-tutorials-repository]]
 === Start your Jenkins instance
 
 1. Obtain the latest Jenkins instance, customized for this tutorial, by cloning the link:https://github.com/jenkins-docs/quickstart-tutorials.git[quickstart-tutorials repository].
