@@ -57,8 +57,8 @@ image:tutorials/docker/choose-plugins-installation.png[alt="Choosing plugins",wi
 Two options are available: *Install suggested plugins* and *Select plugins to install*. +
 We'll choose the *Install suggested plugins* option for this tutorial, but you could choose the other option if you already know which plugins you will need.
 
-image:tutorials/docker/plugins-installation.png[alt="Plugins installing",width=860] +
 [.boxshadow]
+image:tutorials/docker/plugins-installation.png[alt="Plugins installing",width=860] +
 The default set of plugins will then be installed. +
 This process may take a few minutes.
 You will then be presented with the *Create First Admin User* page.
@@ -72,10 +72,13 @@ You will then be redirected to the *Instance Configuration* page.
 [.boxshadow]
 image:tutorials/docker/instance-configuration.png[alt="Instance configuration",width=860] +
 That's the place where you'll configure the Jenkins controller's URL.
-By default, it is set to http://localhost:8080. +
+By default, it is set to `http://localhost:8080`. +
 You can keep it as is.
 Click on the *Save and Finish* button.
 
+Depending on the set of plugins installed, you may be redirected to the Jenkins dashboard or to this page, stating that Jenkins has to be restarted.
+[.boxshadow]
+image:tutorials/docker/jenkins-is-almost-ready.png[alt="Restart Jenkins",width=860] +
 
 
 [.boxshadow]
