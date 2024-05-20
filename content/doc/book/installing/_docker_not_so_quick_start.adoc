@@ -80,7 +80,6 @@ Depending on the set of plugins installed, you may be redirected to the Jenkins 
 [.boxshadow]
 image:tutorials/docker/jenkins-is-almost-ready.png[alt="Restart Jenkins",width=860] +
 
-
 [.boxshadow]
 
 1. Obtain the latest Jenkins instance, customized for this tutorial, by cloning the link:https://github.com/jenkins-docs/quickstart-tutorials.git[quickstart-tutorials repository].
@@ -111,6 +110,11 @@ Click on the *Available Plugins* menu, and then in the search box enter `SSH age
 
 [.boxshadow]
 image:tutorials/docker/install-ssh-agent-plugin.png[alt="Installing the SSH agent plugin",width=860] +
+Click in the checkbox under *"Install* and click on the *Install* blue button on the right.
+
+[.boxshadow]
+image:tutorials/docker/installing-ssh-agent-plugin.png[alt="Installing the SSH agent plugin",width=860] +
+You can then click on the checkbox just next to *Restart Jenkins when installation is complete and no jobs are running*.
 
 === Creating the credentials
 
