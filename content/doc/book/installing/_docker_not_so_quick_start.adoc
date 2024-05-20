@@ -100,7 +100,7 @@ Click in the checkbox under *"Install* and click on the *Install* blue button on
 
 [.boxshadow]
 image:tutorials/docker/installing-ssh-agent-plugin.png[alt="Installing the SSH agent plugin",width=860] +
-You can then click on the checkbox just next to *Restart Jenkins when installation is complete and no jobs are running*.
+You can then click on the checkbox just next to *Restart Jenkins when installation is complete and no jobs are running* on the very bottom of the page.
 
 === Creating the credentials
 
