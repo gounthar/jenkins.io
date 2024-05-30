@@ -144,12 +144,24 @@ Now that the credentials are created, you can create the agent.
 . Fill in the *Remote root directory* field with `/home/jenkins`.
 . In the *Launch method* listbox, choose *Launch agent via SSH*.
 . Fill in the *Host* field with `wizard_agent`.
-. Fill in the *Credentials* field with `jenkins (Jenkins agent SSH key)`.
-. Fill in the *Host Key Verification Strategy* listbox with *Non verifying Verification Strategy*.
+. Fill in the *Credentials* field with `jenkins (Jenkins agent SSH key)` (that's the key we created a few minutes ago).
+. Fill in the *Host Key Verification Strategy* listbox with `Non verifying Verification Strategy`.
 . Click on *Save*.
 
 [.boxshadow]
 image:tutorials/docker/create-agent.png[alt="Creating agent",width=860] +
+
+You can now see the agent in the list of nodes.
+There is still a red warning in the top part, just next to the search box linked to the agents.
+When you hover over it, you can see this message:
+[.boxshadow]
+image:tutorials/docker/agent-warning.png[alt="Agent warning",width=860] +
+
+> Building on the built-in node can be a security issue. You should set the number of executors on the built-in node to 0. See link:/redirect/building-on-controller/[the documentation]
+
+Let's address this issue.
+
+=== Disabling the built-in node
 
 
 [[accessing-the-jenkins-docker-containers]]
