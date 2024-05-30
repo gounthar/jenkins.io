@@ -124,18 +124,32 @@ image:tutorials/docker/add-credentials.png[alt="Adding credentials",width=860] +
 . Fill in the *Username* field with `jenkins`.
 . In the *Private Key* field, click on the *Enter directly* radio button.
 . Click on *Add*.
-. In the *Key* field, paste the content of the `jenkins_agent_ed` file you can find in the `wizard_agent` thanks to the following command:
-
-[source,bash]
-----
-docker compose exec wizard_agent cat /home/jenkins/.ssh/jenkins_agent_ed
-----
-
-Copy the content beginning with `-----BEGIN OPENSSH PRIVATE KEY-----` and ending with `-----END OPENSSH PRIVATE KEY-----` and paste it in the *Key* field.
+. In the *Key* field, paste the content of the `jenkins_agent_ed` file you can find in the `wizard_agent` thanks to the following command: `docker compose exec wizard_agent cat /home/jenkins/.ssh/jenkins_agent_ed`
+. Copy the content beginning with `-----BEGIN OPENSSH PRIVATE KEY-----` and ending with `-----END OPENSSH PRIVATE KEY-----` and paste it in the *Key* field.
 [.boxshadow]
 image:tutorials/docker/ssh-credentials.png[alt="SSH credentials",width=860] +
+. Click on *Create*.
 
 === Creating the agent
+
+Now that the credentials are created, you can create the agent.
+. Navigate to the Jenkins dashboard and click on *Manage Jenkins* in the left-hand menu.
+. Then, click on *Nodes*.
+. Click on *New Node* on the top right.
+. Fill in the *Node name* field with `wizard_agent`.
+. Choose *Permanent Agent*.
+. Click on *Create*.
+. Fill in the *Description* field with `Jenkins agent`.
+. Fill in the *Remote root directory* field with `/home/jenkins`.
+. In the *Launch method* listbox, choose *Launch agent via SSH*.
+. Fill in the *Host* field with `wizard_agent`.
+. Fill in the *Credentials* field with `jenkins (Jenkins agent SSH key)`.
+. Fill in the *Host Key Verification Strategy* listbox with *Non verifying Verification Strategy*.
+. Click on *Save*.
+
+[.boxshadow]
+image:tutorials/docker/create-agent.png[alt="Creating agent",width=860] +
+
 
 [[accessing-the-jenkins-docker-containers]]
 == Accessing the Docker containers
