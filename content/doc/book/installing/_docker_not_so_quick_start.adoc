@@ -163,6 +163,12 @@ Let's address this issue.
 
 === Disabling the built-in node
 
+Click on the white on blue *Manage Jenkins* button on the right of the message.
+It will redirect you to the http://localhost:8080/computer/(built-in)/configure[*Configure Built-In node*] page.
+[.boxshadow]
+image:tutorials/docker/disable-built-in-node.png[alt="Disabling built-in node",width=860] +
+Fill in the *# of executors* field with `0`.
+Click on *Save*.
 
 [[accessing-the-jenkins-docker-containers]]
 == Accessing the Docker containers
