@@ -107,11 +107,12 @@ You can then log back in.
 === Creating the credentials
 
 Once the plugin is installed, you can create the credentials.
-Click on *Manage Jenkins* in the left-hand menu.
-Then, click on *Credentials*.
-Click on *System*.
-Click on *Global credentials (unrestricted)*.
-Click on *Add Credentials*.
+
+. Click on *Manage Jenkins* in the left-hand menu.
+. Then, click on *Credentials*.
+. Click on *System*.
+. Click on *Global credentials (unrestricted)*.
+. Click on *Add Credentials*.
 
 [.boxshadow]
 image:tutorials/docker/add-credentials.png[alt="Adding credentials",width=860] +
