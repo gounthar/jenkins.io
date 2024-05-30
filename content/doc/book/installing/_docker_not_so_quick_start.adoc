@@ -133,6 +133,7 @@ image:tutorials/docker/ssh-credentials.png[alt="SSH credentials",width=860] +
 === Creating the agent
 
 Now that the credentials are created, you can create the agent.
+
 . Navigate to the Jenkins dashboard and click on *Manage Jenkins* in the left-hand menu.
 . Then, click on *Nodes*.
 . Click on *New Node* on the top right.
