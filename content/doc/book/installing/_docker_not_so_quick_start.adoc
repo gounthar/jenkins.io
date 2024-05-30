@@ -115,6 +115,8 @@ Once the plugin is installed, you can create the credentials.
 . Click on *System*.
 . Click on *Global credentials (unrestricted)*.
 . Click on *Add Credentials* (blue button on the right).
+[.boxshadow]
+image:tutorials/docker/add-credentials.png[alt="Adding credentials",width=860] +
 . In the *Kind* listbox, choose *SSH Username with private key*.
 . Fill in the *Username* field with `jenkins`.
 . In the *Private Key* field, click on the *Enter directly* radio button.
@@ -128,8 +130,6 @@ docker compose exec wizard_agent cat /home/jenkins/.ssh/jenkins_agent_ed
 
 Copy the content beginning with `-----BEGIN OPENSSH PRIVATE KEY-----` and ending with `-----END OPENSSH PRIVATE KEY-----` and paste it in the *Key* field.
 
-[.boxshadow]
-image:tutorials/docker/add-credentials.png[alt="Adding credentials",width=860] +
 
 === Creating the agent
 
