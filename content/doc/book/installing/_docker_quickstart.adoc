@@ -22,6 +22,7 @@ You can refer to the Docker documentation for instructions on how to link:https:
 
 1. Obtain the latest Jenkins instance, customized for this tutorial, by cloning the link:https://github.com/jenkins-docs/quickstart-tutorials.git[quickstart-tutorials repository] or by downloading the https://raw.githubusercontent.com/jenkins-docs/quickstart-tutorials/main/docker-compose.yaml[`docker-compose.yaml`] file.
 2. After cloning, navigate to the `quickstart-tutorials` directory, and execute the command `docker compose --profile default up -d` to run the example.
+This time, we're not using the `wizard` profile, but the `default` profile.
 3. Once the containers are running successfully (you can verify this with `docker compose ps`), the controller can be accessed at http://localhost:8080.
 
 image::docker/jenkins-docker-instance-started.png[width=860]

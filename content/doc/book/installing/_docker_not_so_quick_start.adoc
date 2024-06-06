@@ -12,18 +12,19 @@ _run-jenkins-in-docker.adoc).
 [[using-the-wizard-with-docker-compose]]
 == Using the wizard.
 
-The first method we proposed (<<quickstart-tutorials-repository>>) is the easiest way to get Jenkins up and running.
+The second method we propose (<<quickstart-tutorials-repository>>) is the easiest way to get Jenkins up and running.
 However, you may want to have a better feel of what's happening under the hood. +
-This is where the second method comes in. +
-You can still use the same link:https://github.com/jenkins-docs/quickstart-tutorials.git[quickstart-tutorials repository] as in the first step. +
-If you have already launched the Jenkins instance previously, you can stop it by running the command `docker compose down -v --remove-orphans`. +
-Once it's done, you can proceed with the second method.
-
+This is where the first method comes in. +
+1. Obtain the latest Jenkins instance, customized for this tutorial, by cloning the link:https://github.com/jenkins-docs/quickstart-tutorials.git[quickstart-tutorials repository] or by downloading the https://raw.githubusercontent.com/jenkins-docs/quickstart-tutorials/main/docker-compose.yaml[`docker-compose.yaml`] file. +
+2. After cloning, navigate to the `quickstart-tutorials` directory, and execute the following command to run the example:+
 [source,bash]
 ----
 docker compose --profile wizard up
 ----
-This time, we're not using the `default` profile, but the `wizard` profile.
+3. Once the containers are running successfully (you can verify this with `docker compose ps`), the controller can be accessed at http://localhost:8080.
+
+If you have already launched the Jenkins instance previously, you can stop it by running the command `docker compose --profile wizard down -v --remove-orphans`. +
+
 This profile will guide you through the setup of Jenkins.
 We're not using the `-d` or `--detach` option, so you can see the output of the containers, and get a better understanding of what's happening.
 After a while, you should see something like this displaying in the console:
