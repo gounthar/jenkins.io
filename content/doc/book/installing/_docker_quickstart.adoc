@@ -18,7 +18,7 @@ Therefore, ensure that your Docker for Windows installation is configured to run
 You can refer to the Docker documentation for instructions on how to link:https://docs.docker.com/desktop/wsl/[use Linux containers].
 
 [[quickstart-tutorials-repository]]
-=== Start your Jenkins instance
+=== Start your Jenkins controller/agent combo
 
 1. Obtain the latest Jenkins instance, customized for this tutorial, by cloning the link:https://github.com/jenkins-docs/quickstart-tutorials.git[quickstart-tutorials repository] or by downloading the https://raw.githubusercontent.com/jenkins-docs/quickstart-tutorials/main/docker-compose.yaml[`docker-compose.yaml`] file.
 2. After cloning, navigate to the `quickstart-tutorials` directory, and execute the command `docker compose --profile default up -d` to run the example.
