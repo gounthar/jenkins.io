@@ -15,7 +15,7 @@ _run-jenkins-in-docker.adoc).
 The second method we propose (<<quickstart-tutorials-repository>>) is the most straightforward way to get Jenkins up and running.
 However, you may desire a deeper understanding of the underlying processes.
 This is where the first method comes into play. +
-We'll need two terminals for this. One will be used to run the `docker compose` command, and the other will be used to check the status of the containers and get some information.
+We'll need two terminals for this. One will be used to run the `docker compose` command, and the other one will be used to check the status of the containers and get some information. +
 1. Obtain the latest Jenkins controller/agent combination, tailored for this tutorial, by cloning the link:https://github.com/jenkins-docs/quickstart-tutorials.git[quickstart-tutorials repository]. +
 2. After cloning, navigate to the `quickstart-tutorials` directory in the first terminal and execute the following command to run the example: +
 [source,bash]
@@ -23,14 +23,19 @@ We'll need two terminals for this. One will be used to run the `docker compose` 
 docker compose --profile wizard up
 ----
 
-Once the containers are running successfully, open a second terminal, and navigate to the same directory.
-Verify all is going well thanks to the `docker compose ps` command in the second terminal. +
-The controller can now be accessed at http://localhost:8080.
+3. Once the containers are running successfully, open a second terminal, and navigate to the same directory.
+4. Verify all is going well thanks to the `docker compose ps` command in the second terminal. +
+5. The controller can now be accessed at http://localhost:8080.
 
+
+[NOTE]
+====
 If you have already launched the Jenkins controller/agent combo  previously, you can stop it by running the command `docker compose --profile wizard down -v --remove-orphans`. +
+====
 
 The `wizard` profile we're using will guide you through the setup process of Jenkins.
-We're omitting the https://docs.docker.com/reference/cli/docker/compose/up/#options[`-d` or `--detach` option] in the `docker compose` command, allowing you to view the output of the containers and gain a better understanding of the underlying processes.
+We're omitting the https://docs.docker.com/reference/cli/docker/compose/up/#options[`-d` or `--detach` option] in the `docker compose` command, allowing you to view the output of the containers and gain a better understanding of the underlying processes. +
+
 After a few moments, you should see something similar to the following displayed in the console:
 [source,bash]
 ----
