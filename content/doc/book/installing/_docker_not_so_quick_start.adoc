@@ -163,44 +163,45 @@ Let's address this issue.
 
 === Disabling the built-in node
 
-Click on the white on blue *Manage Jenkins* button on the right of the message.
+. Click on the white on blue *Manage Jenkins* button on the right of the message.
 It will redirect you to the http://localhost:8080/computer/(built-in)/configure[*Configure Built-In node*] page.
 [.boxshadow]
 image:tutorials/docker/disable-built-in-node.png[alt="Disabling built-in node",width=860] +
-Fill in the *# of executors* field with `0`.
-Click on *Save*.
 
-[[accessing-the-jenkins-docker-containers]]
+. Fill in the *Number of executors* field with `0`.
+. Click on *Save*.
+
+[[accessing-the-jenkins-docker-wizard-containers]]
 == Accessing the Docker containers
 
 If you'd like to access the Docker container running your Jenkins controller through a terminal or command prompt using the link:https://docs.docker.com/reference/cli/docker/compose/exec/[`docker compose exec`] command, include the name of the service within the command to get something like:
 
 [source,bash]
 ----
-$ docker compose exec jenkins_controller bash
-jenkins@be6994815148:/$ # We are now in the container running Jenkins
+$ docker compose exec wizard_controller bash
+jenkins@91902bfa45d2:/$ # We are now in the container running Jenkins
 ----
 
-This will access the Docker container named "jenkins_controller."
+This will access the Docker container named "wizard_controller."
 As with standard access to a machine, you can exit the container by typing `exit` or pressing +++<kbd>Ctrl+D</kbd>+++.
 
 To access the Docker container running your Jenkins agent, use the following command:
 
 [source,bash]
 ----
-$ docker compose exec default_agent bash
-jenkins@be6994815148:/$ # We are now in the container running the Jenkins agent
+$ docker compose exec wizard_agent bash
+root@5e1761d20c6c:/home/jenkins# # We are now in the container running the Jenkins agent
 ----
 
 To leave the container, type `exit` or press +++<kbd>Ctrl+D</kbd>+++.
 
-[[accessing-the-jenkins-console-log-through-docker-logs]]
+[[accessing-the-jenkins-wizard-console-log-through-docker-logs]]
 == Accessing the Docker logs
 
 Should you need to access the services logs, you can do so by running the following command:
 [source,bash]
 ----
-docker compose logs -f
+docker compose --profile wizard logs -f
 ----
 
 This command will display the logs of all services running in the dockerized Jenkins instance.
@@ -208,13 +209,13 @@ You will see the logs of the Jenkins controller, Jenkins agent, and the side-kic
 If you would like to see the logs of a specific service, you can do so by specifying the service name as follows:
 [source,bash]
 ----
-docker compose logs -f <service-name>
+docker compose --profile wizard logs -f <service-name>
 ----
 
 With `<service-name>` being:
 
-- `jenkins_controller` for the Jenkins controller
-- `default_agent` for the Jenkins agent
+- `wizard_controller` for the Jenkins controller
+- `wizard_agent` for the Jenkins agent
 
 == Accessing the Jenkins home directory
 
@@ -222,7 +223,7 @@ You can access the Jenkins home directory, to check the details of a Jenkins bui
 To access the Jenkins home directory, use the following command:
 [source,bash]
 ----
-docker compose exec jenkins_controller bash
+docker compose exec wizard_controller bash
 ----
 
 You will then be in the Jenkins controller container.
@@ -233,12 +234,12 @@ jenkins@be6994815148:/$ cd /var/jenkins_home/jobs
 jenkins@be6994815148:/var/jenkins_home/jobs$ ls -la
 ----
 
-This will list all the jobs in the Jenkins home directory.
+This will list all the jobs in the Jenkins home directory (if any).
 
 Should you want to copy the jobs subdirectory from the Jenkins home directory to your local machine, you can use the following command:
 [source,bash]
 ----
-docker compose cp jenkins_controller:/var/jenkins_home/jobs <local-path>
+docker compose cp wizard_controller:/var/jenkins_home/jobs <local-path>
 ----
 
 With `<local-path>` being the path on your local machine where you want to copy the jobs subdirectory.
