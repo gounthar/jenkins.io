@@ -70,4 +70,6 @@ You can see a list of previously published versions of the `jenkins/jenkins` ima
 include::doc/book/installing/_docker_not_so_quick_start.adoc[]
 include::doc/book/installing/_docker_quickstart.adoc[]
 
+////
 include::doc/book/installing/_setup-wizard-for-tutorials.adoc[]
+////
