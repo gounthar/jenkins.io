@@ -42,6 +42,8 @@ Additionally, you will need to install Docker Compose.
 While it’s included in the Docker Desktop installation for Windows, Linux, and macOS, you will need to install it separately if you only installed the Docker Engine.
 Follow the link:https://docs.docker.com/compose/install/linux/#install-using-the-repository[instructions] provided on the Docker documentation website for Linux, these link:https://docs.docker.com/compose/install/standalone/#on-windows-server[instructions] for Windows, or these link:https://www.ionos.com/digitalguide/server/configuration/docker-compose-on-mac/[instructions] for macOS.
 
+docker versions updatecli
+
 [CAUTION]
 ====
 If you are installing Docker on a Linux-based operating system, ensure you configure Docker so it can be managed as a non-root user.
@@ -58,8 +60,8 @@ This image contains the current link:/download[Long-Term Support (LTS) release o
 However, this image does not include the plugins you may need for your Jenkins instance, requiring you to install them manually later on.
 In this guide, we propose two ways of doing this:
 
-1. First, use Docker Compose to run the installation wizard, giving you a better understanding of what happens under the hood.
-2. Second, use Docker Compose to quickly set up a running Jenkins instance with a nice set of plugins in a matter of seconds.
+1. First, use Docker Compose to run the installation wizard, which will provide you with a better understanding of the underlying processes.
+2. Second, leverage Docker Compose to swiftly set up a Jenkins controller and an agent equipped with a comprehensive set of plugins, all within a matter of seconds.
 
 [NOTE]
 ====
