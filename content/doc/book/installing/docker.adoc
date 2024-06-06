@@ -64,7 +64,7 @@ A new `jenkins/jenkins` Docker image is published each time a new release of Jen
 You can see a list of previously published versions of the `jenkins/jenkins` image on the link:https://hub.docker.com/r/jenkins/jenkins/tags/[tags] page.
 ====
 
-However, this image does not include the plugins you may need for your Jenkins instance, requiring you to install them manually later on.
+However, this image does not include the plugins you may need for your Jenkins controller, requiring you to install them manually later on.
 In this guide, we propose two ways of doing this:
 
 1. First, use Docker Compose to run the installation wizard, which will provide you with a better understanding of the underlying processes.
