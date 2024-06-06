@@ -21,6 +21,7 @@ This is where the first method comes in. +
 ----
 docker compose --profile wizard up
 ----
++
 3. Once the containers are running successfully (you can verify this with `docker compose ps`), the controller can be accessed at http://localhost:8080.
 
 If you have already launched the Jenkins instance previously, you can stop it by running the command `docker compose --profile wizard down -v --remove-orphans`. +
