@@ -58,8 +58,8 @@ This image contains the current link:/download[Long-Term Support (LTS) release o
 However, this image does not include the plugins you may need for your Jenkins instance, requiring you to install them manually later on.
 In this guide, we propose two ways of doing this:
 
-1. First, use Docker Compose to quickly set up a running Jenkins instance with a nice set of plugins in a matter of seconds.
-2. Second, use Docker Compose to run the installation wizard, giving you a better understanding of what happens under the hood.
+1. First, use Docker Compose to run the installation wizard, giving you a better understanding of what happens under the hood.
+2. Second, use Docker Compose to quickly set up a running Jenkins instance with a nice set of plugins in a matter of seconds.
 
 [NOTE]
 ====
