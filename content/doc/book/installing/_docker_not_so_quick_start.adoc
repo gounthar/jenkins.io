@@ -21,14 +21,14 @@ This is where the first method comes in. +
 ----
 docker compose --profile wizard up
 ----
-+
-3. Once the containers are running successfully (you can verify this with `docker compose ps`), the controller can be accessed at http://localhost:8080.
+
+Once the containers are running successfully (you can verify this with `docker compose ps`), the controller can be accessed at http://localhost:8080.
 
 If you have already launched the Jenkins instance previously, you can stop it by running the command `docker compose --profile wizard down -v --remove-orphans`. +
 
-This profile will guide you through the setup of Jenkins.
-We're not using the `-d` or `--detach` option, so you can see the output of the containers, and get a better understanding of what's happening.
-After a while, you should see something like this displaying in the console:
+This `wizard` profile will guide you through the setup process of Jenkins.
+We're omitting the `-d` or `--detach` option, allowing you to view the output of the containers and gain a better understanding of the underlying processes.
+After a few moments, you should see something similar to the following displayed in the console:
 [source,bash]
 ----
 wizard_controller-1      | *************************************************************
