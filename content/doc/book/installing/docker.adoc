@@ -51,6 +51,13 @@ Read more about this in Docker's link:https://docs.docker.com/engine/installatio
 This page also contains information about how to configure Docker to start on boot.
 ====
 
+=== Linux containers on Windows
+
+The Jenkins project provides both Linux and link:https://hub.docker.com/r/jenkins/jenkins/tags?page=1&name=windows[Windows container images].
+However, this tutorial specifically focuses on the Linux container images.
+Therefore, ensure that your Docker for Windows installation is configured to run Linux Containers rather than link:https://learn.microsoft.com/en-us/virtualization/windowscontainers/quick-start/set-up-environment?tabs=dockerce[Windows Containers].
+You can refer to the Docker documentation for instructions on how to link:https://docs.docker.com/desktop/wsl/[use Linux containers].
+
 === Downloading and running Jenkins in Docker
 
 There are several Docker images of Jenkins available.
