@@ -94,6 +94,7 @@ image:tutorials/docker/jenkins-is-almost-ready.png[alt="Restart Jenkins",width=8
 
 Now that you have your Jenkins controller up and running, you can connect an agent to it.
 In this tutorial, we'll use an link:/doc/pipeline/steps/ssh-agent/#ssh-agent-plugin[SSH agent] that will be running in a Docker container.
+This container is already running, as it started with the `docker compose` command.
 To do so, you need to create a new agent in Jenkins and configure it to connect to the agent container.
 But first of all, we need to install the link:https://github.com/jenkinsci/ssh-agent-plugin[SSH agent plugin] and create the credentials.
 
@@ -133,8 +134,9 @@ image:tutorials/docker/add-credentials.png[alt="Adding credentials",width=860] +
 . Fill in the *Username* field with `jenkins`.
 . In the *Private Key* field, click on the *Enter directly* radio button.
 . Click on *Add*.
-. In the *Key* field, paste the content of the `jenkins_agent_ed` file you can find in the `wizard_agent` thanks to the following command: `docker compose exec wizard_agent cat /home/jenkins/.ssh/jenkins_agent_ed`
-. Copy the content beginning with `-----BEGIN OPENSSH PRIVATE KEY-----` and ending with `-----END OPENSSH PRIVATE KEY-----` and paste it in the *Key* field.
+. Switch to the second terminal and enter this command:  `docker compose exec wizard_agent cat /home/jenkins/.ssh/jenkins_agent_ed`.
+This will copy the content of the `jenkins_agent_ed` file in the `wizard_agent` container to the terminal.
+. Copy it to your clipboard, beginning with `-----BEGIN OPENSSH PRIVATE KEY-----` and ending with `-----END OPENSSH PRIVATE KEY-----` and paste it in the *Key* field.
 [.boxshadow]
 image:tutorials/docker/ssh-credentials.png[alt="SSH credentials",width=860] +
 . Click on *Create*.
