@@ -42,6 +42,10 @@ Additionally, you will need to install Docker Compose.
 While it’s included in the Docker Desktop installation for Windows, Linux, and macOS, you will need to install it separately if you only installed the Docker Engine.
 Follow the link:https://docs.docker.com/compose/install/linux/#install-using-the-repository[instructions] provided on the Docker documentation website for Linux, these link:https://docs.docker.com/compose/install/standalone/#on-windows-server[instructions] for Windows, or these link:https://www.ionos.com/digitalguide/server/configuration/docker-compose-on-mac/[instructions] for macOS.
 
+If you are unable to install `docker compose` on your machine for any reason, you can still run the example in the cloud for free thanks to link:https://www.gitpod.io/[GitPod]. GitPod link:https://www.gitpod.io/pricing[is free] for 50 hours per month.
+You need to link it to your GitHub account so you can run the example in the cloud.
+Click on link:https://gitpod.io/?autostart=true#https://github.com/jenkins-docs/quickstart-tutorials[that link] to open a new browser tab with a GitPod workspace where you'll be able to start the Jenkins instance, and run the rest of this guide.
+
 docker versions updatecli
 
 [CAUTION]

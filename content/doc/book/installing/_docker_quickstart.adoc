@@ -27,10 +27,6 @@ Should you want to view the output of the containers, you can use the `docker co
 
 image::docker/jenkins-docker-instance-started.png[width=860]
 
-If you are unable to install `docker compose` on your machine for any reason, you can still run the example in the cloud for free thanks to link:https://www.gitpod.io/[GitPod]. GitPod link:https://www.gitpod.io/pricing[is free] for 50 hours per month.
-You need to link it to your GitHub account so you can run the example in the cloud.
-Click on link:https://gitpod.io/?autostart=true#https://github.com/jenkins-docs/quickstart-tutorials[that link] to open a new browser tab with a GitPod workspace where you'll be able to start the Jenkins instance, and run the rest of this guide.
-
 Now, log in via your browser using the `admin` username and `admin` password on link:http://localhost:8080[localhost:8080].
 
 [[accessing-the-jenkins-docker-containers]]
@@ -105,4 +101,26 @@ docker compose cp jenkins_controller:/var/jenkins_home/jobs <local-path>
 ----
 
 With `<local-path>` being the path on your local machine where you want to copy the jobs subdirectory.
+
+You could also do it the other way around, by copying the jobs subdirectory from your local machine to the Jenkins home directory in the container.
+To do so, use the following command:
+
+[source,bash]
+----
+docker compose cp <local-path> default_controller:/var/jenkins_home/jobs
+----
+
+This could be useful as the first step to try to migrate jobs from an old Jenkins controller to the last LTS version.
+
+[[stopping-the-jenkins-docker-default-containers]]
+== Stopping the Docker containers
+
+To stop the Docker containers, run the following command in the second terminal:
+[source,bash]
+----
+docker compose down --profile default -v --remove-orphans
+----
+
+This will stop the Docker containers, remove the volumes, and remove the containers.
+If you want to keep the volumes, you can remove the `-v` option from the command.
 
