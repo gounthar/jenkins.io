@@ -209,13 +209,13 @@ To leave the container, type `exit` or press +++<kbd>Ctrl+D</kbd>+++.
 [[accessing-the-jenkins-wizard-console-log-through-docker-logs]]
 == Accessing the Docker logs
 
-Should you need to access the services logs, you can do so by running the following command:
+Should you need to access the services logs, you can do so by running the following command in the second terminal:
 [source,bash]
 ----
 docker compose --profile wizard logs -f
 ----
 
-This command will display the logs of all services running in the dockerized Jenkins instance.
+This command will display the logs of all services running in the dockerized Jenkins controller and agent combination.
 You will see the logs of the Jenkins controller, Jenkins agent, and the side-kick service.
 If you would like to see the logs of a specific service, you can do so by specifying the service name as follows:
 [source,bash]
@@ -254,4 +254,28 @@ docker compose cp wizard_controller:/var/jenkins_home/jobs <local-path>
 ----
 
 With `<local-path>` being the path on your local machine where you want to copy the jobs subdirectory.
+You could also do it the other way around, by copying the jobs subdirectory from your local machine to the Jenkins home directory in the container.
+To do so, use the following command:
+
+[source,bash]
+----
+docker compose cp <local-path> wizard_controller:/var/jenkins_home/jobs
+----
+
+This could be useful as the first step to try to migrate jobs from an old Jenkins controller to the last LTS version.
+
+[[stopping-the-jenkins-docker-wizard-containers]]
+== Stopping the Docker containers
+
+To stop the Docker containers, run the following command in the second terminal:
+[source,bash]
+----
+docker compose down --profile wizard -v --remove-orphans
+----
+
+This will stop the Docker containers, remove the volumes, and remove the containers.
+If you want to keep the volumes, you can remove the `-v` option from the command.
+
+
+
 
